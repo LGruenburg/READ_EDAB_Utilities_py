@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "READ_EDAB_Utilities_py"
+version = "0.0.1dev1"
+description = "Common Functions for Spatial Data"
+readme = "README.md"
+authors = [{ name = "Laura Gruenburg" }]
+dependencies = [
+    "xarray",
+    "geopandas",
+    "regionmask"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.setuptools]
+packages.find.where = ["."]
+packages.find.include = ["READ_EDAB_Utilities_py*"]
