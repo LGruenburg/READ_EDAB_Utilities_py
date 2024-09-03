@@ -20,7 +20,7 @@ def crop_nd(data, longitude_name, latitude_name, shape):
     region = regionmask.from_geopandas(shape)
     
     # Create the mask
-    mask = region.mask(data[longitude_name], data[latitude_name])
+    mask = region.mask(data[longitude_name].astype('f4'), data[latitude_name].astype('f4'))
     
     # Apply mask to the data
     masked_ds = data.where(mask == region.numbers[0])
